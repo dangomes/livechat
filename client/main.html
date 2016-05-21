@@ -1,0 +1,80 @@
+<head>
+    <title>:: LiveChat ::</title>
+    <meta name="viewport" content="initial-scale=1">
+</head>
+
+<body id="body">
+    <div id="conteiner">
+        <div class="content-left left">
+            <h1>LiveChat</h1>
+            {{> welcome }}
+            {{> input }}
+        </div>
+        <div class="content-right left">
+            {{> messages }}
+        </div>
+        {{> equipe }}
+    </div>
+</body>
+
+<template name="welcome">
+    <p>
+    	Bem vindo ao LiveChat!
+        <br />
+        <small><strong>Versão: 0.1</strong></small>
+    </p>
+    <br /><br />
+</template>
+
+<template name="input">
+    <div class="conteiner-input">
+    	
+        <label id="lbl-user" for="user">
+            <p>Nome:</p>
+            <p><input id="user" type="text" placeholder="Anônimo"></p>
+        </label>
+		
+        <label id="lbl-message" for="message">        
+            <p class="hidden-mobile">Mensagem:</p>
+            <p><input id="message" type="text" placeholder="Digite a sua mensagem aqui..."></p>
+            <p class="hidden-mobile"><em>[Precione <strong>ENTER</strong> para enviar]</em></p>
+        </label>
+        
+        <button id="reset">
+        	Excluir Histórico
+        </button>
+        
+    </div>
+</template>
+
+<template name="messages">
+    <div class="conteiner-messages">
+        {{#each messages}}
+            <div id="conteiner-message" class="message">
+            	<p>
+                	<span>
+                    	<strong>{{name}}</strong> - <em>[{{time}}]</em>: 
+                    </span>
+                    {{message}}
+                </p>
+            </div>
+        {{/each}}
+    </div>
+</template>
+
+<template name="equipe">
+    <div class="conteiner-equipe clear">
+     	<h1>Equipe:</h1>
+        <ul>
+        	<li>
+            	<strong>Diogo Ramalho</strong><br />
+                <em>dioramalho@gmail.com</em>
+            </li>
+            
+            <li>
+            	<strong>Danilo Silva</strong><br />
+                <em>danilobruno.pe@gmail.com</em>
+            </li>
+        </ul>   
+    </div>
+</template>

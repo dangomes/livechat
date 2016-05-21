@@ -1,0 +1,90 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.left {float:left;}
+.right {float:right;}
+.clear {clear:both;}
+
+em,i {font-style:italic;}
+strong, b {font-weight:bold;}
+
+#conteiner {font-family: Verdana, Geneva, sans-serif; overflow:hidden; padding:35px 50px; position:relative;}
+#conteiner h1 {font-size:28px; line-height:36px;}
+#conteiner .content-left {margin:0 125px 35px 0; overflow:hidden; max-width:300px; width:100%;}
+#conteiner .content-left .conteiner-input {overflow:hidden;}
+#conteiner .content-left .conteiner-input label {display:block; margin: 0 0 25px 0;}
+#conteiner .content-left .conteiner-input label#lbl-message {}
+#conteiner .content-left .conteiner-input label p {font-size:12px; padding:0 0 8px 0;}
+#conteiner .content-left .conteiner-input label p input {border:1px solid #CCC; box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -webkit-box-sizing:border-box; padding:5px 8px; transition:all ease-in-out 0.3s; -moz-transition:all ease-in-out 0.3s; -o-transition:all ease-in-out 0.3s; -webkit-transition:all ease-in-out 0.3s; width:100%;}
+#conteiner .content-left .conteiner-input label p input#message:focus {height:50px; transition:all ease-in-out 0.3s; -moz-transition:all ease-in-out 0.3s; -o-transition:all ease-in-out 0.3s; -webkit-transition:all ease-in-out 0.3s;}
+#conteiner .content-left .conteiner-input label p em {color:#AAA; font-size:11px; font-style:italic;}
+#conteiner .content-left .conteiner-input #reset {background-color:#E41B17; border:2px solid #990012; color:#FFF; font-weight:bold; padding:5px 12px;}
+#conteiner .content-left .conteiner-input #reset:hover {cursor:pointer;}
+
+#conteiner .content-right {overflow:hidden; max-width:500px; width:100%;}
+#conteiner .content-right .conteiner-messages {height:400px; overflow-x:hidden; overflow-y:auto;}
+#conteiner .content-right .conteiner-messages .message {border-bottom:1px solid #CCC; margin:0 0 12px 0; overflow:hidden; padding:0 0 12px 2px;}
+#conteiner .content-right .conteiner-messages .message p {font-size:12px; line-height:22px;}
+#conteiner .content-right .conteiner-messages .message p span {float:left; line-height:22px; width:150px;}
+#conteiner .content-right .conteiner-messages .message p span strong {}
+#conteiner .content-right .conteiner-messages .message p span em {} 
+
+#conteiner .conteiner-equipe {width:100%;}
+#conteiner .conteiner-equipe h1 {font-size:22px;}
+#conteiner .conteiner-equipe ul {}
+#conteiner .conteiner-equipe ul li {font-size:12px; line-height:18px; padding: 12px 0 0 0;}
+
+@media only screen and (max-device-width: 480px) {
+	
+	#conteiner {padding:5px 5px 100px;}
+	#conteiner .content-right {float:left !important;}
+	#conteiner .content-left .conteiner-input label#lbl-message {background-color:#CCC; box-sizing:border-box; -moz-box-sizing:border-box; -o-box-sizing:border-box; -webkit-box-sizing:border-box; bottom:0; margin:0 0 5px 0; padding:12px 10px 6px; position:fixed; width:97%;}
+	#conteiner .content-left .conteiner-input label#lbl-message p.hidden-mobile {display:none;}
+	#conteiner .content-left .conteiner-input label#lbl-message em {color:#000;}
+}
